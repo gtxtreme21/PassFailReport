@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testResults version="1.2">
+<httpSample t="1317" lt="1317" ts="1368636839568" s="true" lb="create serial component" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="4137"/>
+<sample t="42" lt="1" ts="1368636840886" s="true" lb="Install Aircraft Using DBSql" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<sample t="8" lt="0" ts="1368636840929" s="true" lb="futureDateCalculatorBeanShellSampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<httpSample t="1134" lt="1134" ts="1368636840938" s="true" lb="successful - Add APU message" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="1380">
+  <assertionResult>
+    <name>XPath Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+</httpSample>
+<sample t="44" lt="0" ts="1368636842083" s="true" lb="JDBC Request" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="19"/>
+<sample t="0" lt="0" ts="1368636842128" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="764"/>
+<httpSample t="367" lt="367" ts="1368636842145" s="true" lb="create serial component" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="4048"/>
+<sample t="45" lt="0" ts="1368636842514" s="true" lb="Install Aircraft Using DBSql" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<sample t="8" lt="0" ts="1368636842560" s="true" lb="futureDateCalculatorBeanShellSampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<httpSample t="1556" lt="1555" ts="1368636842569" s="true" lb="successful - Add APU message" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="1380">
+  <assertionResult>
+    <name>XPath Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage>This is a failure test</failureMessage>
+  </assertionResult>
+</httpSample>
+<sample t="33" lt="0" ts="1368636844131" s="true" lb="JDBC Request" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="19"/>
+<sample t="0" lt="0" ts="1368636844165" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="764"/>
+<sample t="37" lt="0" ts="1368636844184" s="true" lb="updateTheAddedApuMessagePostedIndicator-success" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<httpSample t="2307" lt="2307" ts="1368636844221" s="true" lb="updateTheInvalidMessage-success" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="1405">
+  <assertionResult>
+    <name>XPath Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+</httpSample>
+<sample t="1" lt="0" ts="1368636846535" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="767"/>
+<sample t="371" lt="329" ts="1368636846555" s="true" lb="updateTheAddedApuMessagePostedIndicator-failure" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<httpSample t="1903" lt="1903" ts="1368636846927" s="true" lb="updateTheInvalidMessage-failure" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="1381">
+  <assertionResult>
+    <name>XPath Assertion</name>
+    <failure>false</failure>
+    <error>false</error>
+    <failureMessage></failureMessage>
+  </assertionResult>
+</httpSample>
+<sample t="0" lt="0" ts="1368636848836" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="743"/>
+<sample t="33" lt="0" ts="1368636848841" s="true" lb="Delete APU added message" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<sample t="66" lt="0" ts="1368636848875" s="true" lb="select serial component id to delete" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="28"/>
+<sample t="30" lt="0" ts="1368636848942" s="true" lb="delete serialized component history" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<sample t="21" lt="0" ts="1368636848972" s="true" lb="delete serialized component limit" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<sample t="12670" lt="0" ts="1368636848994" s="true" lb="delete serialized component" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
+<sample t="0" lt="0" ts="1368636861664" s="true" lb="Debug Sampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="800"/>
+
+</testResults>
