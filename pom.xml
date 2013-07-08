@@ -6,7 +6,26 @@
   <packaging>maven-plugin</packaging>
   <version>1.0</version>
   <name>Jmeter PassFailReport</name>
-  <url>http://maven.apache.org</url>
+  <description>A plugin that builds a simple report by reading Jmeter jtl result files with Maven.</description>
+  <url>http://github.com/gtxtreme21/PassFailReport</url>
+  <licenses>
+    <license>
+      <name>GNU GENERAL PUBLIC LICENSE</name>
+      <url>http://www.gnu.org/licenses/gpl.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  <scm>
+    <url>http://github.com/gtxtreme21/PassFailReport</url>
+    <connection>http://github.com/gtxtreme21/PassFailReport</connection>
+  </scm>
+  <developers>
+    <developer>
+      <id>gtxtreme21</id>
+      <name>Gary Tipton</name>
+      <email>gary.tipton21@gmail.com</email>
+    </developer>
+  </developers>  
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>
@@ -25,5 +44,4 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <description>Generates a pass/fail report from jtl files in ${project.build.directory}/jmeter/results</description>
 </project>
