@@ -16,9 +16,13 @@
     </license>
   </licenses>
   <scm>
-    <url>http://github.com/gtxtreme21/PassFailReport</url>
-    <connection>http://github.com/gtxtreme21/PassFailReport</connection>
+    <url>https://github.com/gtxtreme21/PassFailReport</url>
+    <connection>https://github.com/gtxtreme21/PassFailReport</connection>
   </scm>
+  <issueManagement>
+  	<system>GitHub</system>
+  	<url>https://github.com/gtxtreme21/PassFailReport/issues</url>
+  </issueManagement>  
   <developers>
     <developer>
       <id>gtxtreme21</id>
