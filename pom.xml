@@ -16,9 +16,9 @@
     </license>
   </licenses>
   <scm>
-    <url>http://github.com/gtxtreme21/PassFailReport</url>
     <connection>scm:git:git@github.com:gtxtreme21/PassFailReport.git</connection>
-	<developerConnection>scm:git:git@github.com:gtxtreme21/PassFailReport.git</developerConnection>    
+	<developerConnection>scm:git:git@github.com:gtxtreme21/PassFailReport.git</developerConnection>
+	<url>https://github.com/gtxtreme21/PassFailReport</url>    
   </scm>
   <distributionManagement>
     <repository>
