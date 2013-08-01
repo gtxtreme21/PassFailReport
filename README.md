@@ -106,3 +106,6 @@ call mvn pom.xml jmeter:jmeter passfailreport:report
 echo The report should be opened in your default browser, click enter to finish
 pause
 rem *** End of script
+
+LICENSE
+This repository respects the GNU GENERAL PUBLIC LICENSE distribution rules. No original files were modified
