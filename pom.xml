@@ -22,9 +22,9 @@
   </scm>
   <distributionManagement>
     <repository>
-      <id>nexus</id>
-      <name>Nexus Staging Repo</name>
-      <url>scp://home/maven2/html</url>  
+      <id>passfailreport-maven-plugin-repo</id>
+      <name>Public Repo</name>
+      <url>https://github.com/gtxtreme21/passfailreport-maven-plugin-repo</url>  
     </repository>
   </distributionManagement>  
   <issueManagement>
