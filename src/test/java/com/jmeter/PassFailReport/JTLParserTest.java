@@ -5,7 +5,9 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URL;
+import java.net.URLDecoder;
 
 import org.junit.After;
 import org.junit.Before;
@@ -38,9 +40,10 @@ public class JTLParserTest {
 		//fail("Not yet implemented");
 	}
 
-	private File getFile() {
+	private File getFile() throws UnsupportedEncodingException {
 		URL url = this.getClass().getResource("/jtlFile.jtl");
-		return new File(url.getFile());
+		String path = URLDecoder.decode(url.getFile(), "utf-8");
+		return new File(path);
 	}
 
 }
