@@ -70,6 +70,7 @@
 		      <plugin>
 		        <groupId>org.apache.maven.plugins</groupId>
 		        <artifactId>maven-gpg-plugin</artifactId>
+		        <version>2.4.1</version>
 		        <executions>
 		          <execution>
 		            <id>sign-artifacts</id>
@@ -77,6 +78,9 @@
 		            <goals>
 		              <goal>sign</goal>
 		            </goals>
+		            <configuration>
+		            <pomFileName>PassFailReport/pom.xml</pomFileName>
+		            </configuration>
 		          </execution>
 		        </executions>
 		      </plugin>
