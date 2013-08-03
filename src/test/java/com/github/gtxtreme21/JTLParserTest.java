@@ -1,4 +1,4 @@
-package com.jmeter.PassFailReport;
+package com.github.gtxtreme21;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -13,7 +13,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.jmeter.PassFailReport.JTLParser;
+import com.github.gtxtreme21.JTLParser;
 
 public class JTLParserTest {
 	private static final String failMsg = "This is a failure test";

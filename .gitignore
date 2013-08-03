@@ -6,6 +6,7 @@
 *.exe
 *.o
 *.so
+*.bat
 
 # Packages #
 ############
@@ -15,7 +16,7 @@
 *.dmg
 *.gz
 *.iso
-*.jar
+#*.jar
 *.rar
 *.tar
 *.zip
@@ -40,3 +41,6 @@ ehthumbs.db
 Thumbs.db
 /target
 .settings/*
+release.properties
+.classpath
+.project

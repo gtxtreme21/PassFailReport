@@ -1,4 +1,4 @@
-package com.jmeter.PassFailReport;
+package com.github.gtxtreme21;
 
 import java.io.File;
 import java.io.IOException;

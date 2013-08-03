@@ -1,4 +1,4 @@
-package com.jmeter.PassFailReport;
+package com.github.gtxtreme21;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.maven.plugin.AbstractMojo;
