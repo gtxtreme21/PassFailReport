@@ -69,7 +69,7 @@ public class MyMojo extends AbstractMojo {
         				w2.write("</ br><b><font size='3' color='green'>There are "+nbrOfFailures+" failures.</font></b>");
         			}
         			w2.write(resultAsString + "</ul></div></html>");
-        			System.out.println("There are "+nbrOfFailures+" failures.");
+        			//System.out.println("There are "+nbrOfFailures+" failures.");
             	}
             } else {
             	w2.write( "<html>input directory not found</html>" );

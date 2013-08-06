@@ -70,9 +70,9 @@ public class JTLParser {
 						}
 					}
 				}
-				if (!StringUtils.isBlank(resultSB.toString())) {
-					System.out.println("Result = "+resultSB.toString());
-				}
+//				if (!StringUtils.isBlank(resultSB.toString())) {
+//					System.out.println("Result = "+resultSB.toString());
+//				}
 			}
 		} catch (ParserConfigurationException e) {
 			// TODO Auto-generated catch block

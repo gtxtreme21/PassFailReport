@@ -56,9 +56,9 @@ These are examples of how the jmeter plugin and this report plugin are defined i
 	</plugin>
 
 	<plugin>
-		<groupId>com.jmeter</groupId>
+		<groupId>com.github.gtxtreme21</groupId>
 		<artifactId>passfailreport-maven-plugin</artifactId>
-		<version>1.0</version>
+		<version>1.1</version>
 		<executions>
 			<execution>
 				<id>passfailreport</id>
@@ -71,9 +71,9 @@ These are examples of how the jmeter plugin and this report plugin are defined i
 	
 *** Alternate configuration if you don't use default directories, you can define them ***
 	<plugin>
-		<groupId>com.jmeter</groupId>
+		<groupId>com.github.gtxtreme21</groupId>
 		<artifactId>passfailreport-maven-plugin</artifactId>
-		<version>1.0</version>
+		<version>1.1</version>
 		<configuration>
 			<inputDirectory>${project.build.directory}/jmeter/results</inputDirectory>
 			<outputDirectory>${project.build.directory}/jmeter/results/reports</outputDirectory>					
@@ -106,6 +106,8 @@ call mvn pom.xml jmeter:jmeter passfailreport:report
 echo The report should be opened in your default browser, click enter to finish
 pause
 rem *** End of script
+
+NOTE: If passfailreport:report doesn't work, try the fully qualified version com.github.gtxtreme21:passfailreport:report
 
 LICENSE
 This repository respects the GNU GENERAL PUBLIC LICENSE distribution rules. No original files were modified
