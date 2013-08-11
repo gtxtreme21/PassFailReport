@@ -4,10 +4,13 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.FilenameFilter;
 import java.io.IOException;
+import java.io.InputStream;
 
 /**
  * Goal which reads jtl files and creates a pass/fail report.
@@ -49,26 +52,37 @@ public class MyMojo extends AbstractMojo {
 
         FileWriter w2 = null;
         try {
+        	String includeJsContent = getJsContent();
+        	
+        	
             w2 = new FileWriter( resultHtml );
             if (null != inputDir && inputDir.exists() && inputDir.isDirectory()) {
             	File[] jmeterResults = getJtlFiles(inputDir);
             	if (null != jmeterResults) {
-            		w2.write( "<html>found:"+jmeterResults.length+" jmeter results<div><ul>" );
+            		w2.write( "<html><head><script type='text/javascript'>");
+            		w2.write(includeJsContent);
+            		w2.write("</script></head>");
+            		w2.write("<body>found:"+jmeterResults.length+" jmeter results<div>" );
             		int nbrOfFailures = 0;
             		StringBuffer resultsSB = new StringBuffer();
+            		resultsSB.append("<ul>");
             		for (File testFile: jmeterResults) {
-            			String results = jtlParser.getTestResult(testFile);
-            			resultsSB.append( "\r\n<li>"+results+"</li>");
+            			TestResult results = jtlParser.getTestResult(testFile);
+            			if(!results.isPassed()){
+            				nbrOfFailures++;
+            			}
+            			resultsSB.append("\r\n<li>").append(results.toHtml()).append("</li>");
             		}
+            		resultsSB.append("</ul>");
             		String resultAsString = resultsSB.toString();
-            		nbrOfFailures += StringUtils.countMatches(resultAsString, "(failed):");
+            		//nbrOfFailures += StringUtils.countMatches(resultAsString, "(failed):");
         			if (0 < nbrOfFailures) {
         				w2.write("</ br><b><font size='3' color='red'>There are "+nbrOfFailures+" failures.</font></b>");
         				wrapFailuresInRedFont(resultAsString);
         			} else {
         				w2.write("</ br><b><font size='3' color='green'>There are "+nbrOfFailures+" failures.</font></b>");
         			}
-        			w2.write(resultAsString + "</ul></div></html>");
+        			w2.write(resultAsString + "</div></body></html>");
         			//System.out.println("There are "+nbrOfFailures+" failures.");
             	}
             } else {
@@ -93,6 +107,18 @@ public class MyMojo extends AbstractMojo {
                 }
             }            
         }
+	}
+
+	private String getJsContent() throws IOException {
+		byte[] byteArray = new byte[1024];
+		InputStream jsInclude = MyMojo.class.getClassLoader().getResourceAsStream("behavior.js");
+    	ByteArrayOutputStream bos = new ByteArrayOutputStream();
+    	int read = 0;
+    	while((read = jsInclude.read(byteArray)) > 0){
+    		bos.write(byteArray, 0, read);
+    	}
+    	jsInclude.close();
+		return new String(bos.toByteArray());
 	}
 
 	private void wrapFailuresInRedFont(String resultAsString) {

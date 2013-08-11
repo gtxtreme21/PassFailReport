@@ -34,7 +34,7 @@ public class JTLParserTest {
 	
 	@Test
 	public void test() {
-		String testResult = parser.getTestResult(jtlFile);
+		String testResult = parser.getTestResult(jtlFile).toHtml();
 		assertNotNull(testResult);
 		assertTrue(testResult.contains(failMsg));
 		//fail("Not yet implemented");
