@@ -16,10 +16,10 @@
 <httpSample t="367" lt="367" ts="1368636842145" s="true" lb="create serial component" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="4048"/>
 <sample t="45" lt="0" ts="1368636842514" s="true" lb="Install Aircraft Using DBSql" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
 <sample t="8" lt="0" ts="1368636842560" s="true" lb="futureDateCalculatorBeanShellSampler" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="11"/>
-<httpSample t="1556" lt="1555" ts="1368636842569" s="true" lb="successful - Add APU message" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="1380">
+<httpSample t="1556" lt="1555" ts="1368636842569" s="false" lb="successful - Add APU message" rc="200" rm="OK" tn="Thread Group 1-1" dt="text" by="1380">
   <assertionResult>
     <name>XPath Assertion</name>
-    <failure>false</failure>
+    <failure>true</failure>
     <error>false</error>
     <failureMessage>This is a failure test</failureMessage>
   </assertionResult>
